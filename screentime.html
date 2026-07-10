@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Screen Time</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>📌 Student<br>Dashboard</h2>
+
+  <a href="index.html">Dashboard</a>
+  <a href="tasks.html">Tasks</a>
+  <a href="pomodoro.html">Pomodoro</a>
+  <a href="habits.html">Habits</a>
+  <a href="screentime.html" class="active">screentime</a>
+  <a href="notes.html">Notes</a>
+
+  <a href="#" onclick="logout()">Logout</a>
+  <a href="calendar.html">Calendar</a>
+</div>
+
+<div class="main">
+  <h1>Screen Time Analyzer 💻</h1>
+  <p class="subtitle">Analyze productive and unproductive screen time.</p>
+
+  <div class="box">
+    <h2>Daily Screen Time</h2>
+
+    <div class="input-row">
+      <input id="appName" placeholder="App name" onkeypress="handleScreenTimeEnter(event)">
+      <input id="hoursUsed" type="number" placeholder="Hours" onkeypress="handleScreenTimeEnter(event)">
+      <select id="category">
+        <option>Productive</option>
+        <option>Entertainment</option>
+        <option>Social Media</option>
+      </select>
+      <button onclick="addScreenTime()">Add</button>
+    </div>
+
+    <h3>Total Screen Time: <span id="totalScreenTime">0h</span></h3>
+    <h3>Productivity Score: <span id="productivityScore">0%</span></h3>
+
+    <ul id="screenList"></ul>
+    <h3 id="suggestion"></h3>
+  </div>
+
+  <div class="box graph-box">
+    <h2>Weekly Screen Time Progress</h2>
+    <canvas id="screenChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>📌 Student<br>Dashboard</h2>
+
+  <a href="index.html">Dashboard</a>
+  <a href="tasks.html">Tasks</a>
+  <a href="pomodoro.html" class="active">Pomodoro</a>
+  <a href="habits.html">Habits</a>
+  <a href="screentime.html">Screen Time</a>
+  <a href="notes.html">Notes</a>
+
+  <a href="#" onclick="logout()">Logout</a>
+  <a href="calendar.html">Calendar</a>
+</div>
+
+<div class="main">
+  <h1>Pomodoro Timer ⏱️</h1>
+  <p class="subtitle">Use 25 minutes focus and 5 minutes break.</p>
+
+  <div class="box">
+    <h2>Focus Timer</h2>
+    <div class="timer" id="timer">25:00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+
+  <div class="box graph-box">
+    <h2>Weekly Focus Sessions</h2>
+    <canvas id="pomodoroChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

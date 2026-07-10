@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-body">
+
+  <div class="auth-box">
+    <h1>FocusFlow</h1>
+    <p class="auth-subtitle">Login to continue your productivity journey</p>
+
+    <input
+  type="email"
+  id="email"
+  placeholder="Enter Email"
+  onkeypress="handleLoginEnter(event)"
+>
+
+<input
+  type="password"
+  id="password"
+  placeholder="Enter Password"
+  onkeypress="handleLoginEnter(event)"
+>
+    <button onclick="login()">Login</button>
+
+    <p class="auth-text">
+      Demo login: enter any email and password
+    </p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

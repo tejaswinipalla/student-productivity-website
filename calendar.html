@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>📌 Student<br>Dashboard</h2>
+
+  <a href="index.html">Dashboard</a>
+  <a href="tasks.html">Tasks</a>
+  <a href="pomodoro.html">Pomodoro</a>
+  <a href="habits.html">Habits</a>
+  <a href="screentime.html">Screen Time</a>
+  <a href="notes.html">Notes</a>
+  <a href="calendar.html" class="active">Calendar</a>
+  <a href="login.html" onclick="logout()">Logout</a>
+</div>
+
+<div class="main">
+  <h1>Study Calendar 📅</h1>
+  <p class="subtitle">Plan your study tasks and important goals.</p>
+
+  <div class="box">
+    <div class="input-row">
+      <input type="date" id="calendarDate">
+      <input id="calendarTask" placeholder="Enter study plan">
+      <button onclick="addCalendarPlan()">Add</button>
+    </div>
+
+    <ul id="calendarList"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>📌 Student<br>Dashboard</h2>
+
+  <a href="index.html">Dashboard</a>
+  <a href="tasks.html" class="active">Tasks</a>
+  <a href="pomodoro.html">Pomodoro</a>
+  <a href="habits.html">Habits</a>
+  <a href="screentime.html">Screen Time</a>
+  <a href="notes.html">Notes</a>
+
+  <a href="#" onclick="logout()">Logout</a>
+  <a href="calendar.html">Calendar</a>
+</div>
+
+<div class="main">
+  <h1>Tasks Page ✅</h1>
+  <p class="subtitle">Manage your daily study tasks clearly.</p>
+
+  <div class="box">
+    <h2>Detailed To-Do List</h2>
+
+    <div class="input-row">
+      <input id="taskInput" placeholder="Enter task" onkeypress="handleTaskEnter(event)">
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <div class="box graph-box">
+    <h2>Weekly Task Progress</h2>
+    <canvas id="taskChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

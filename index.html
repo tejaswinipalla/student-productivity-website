@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>📌 Student<br>Dashboard</h2>
+
+  <a href="index.html">Dashboard</a>
+  <a href="tasks.html">Tasks</a>
+  <a href="pomodoro.html">Pomodoro</a>
+  <a href="habits.html">Habits</a>
+  <a href="screentime.html">Screen Time</a>
+  <a href="notes.html">Notes</a>
+
+  <a href="login.html" onclick="logout()">Logout</a>
+  <a href="calendar.html">Calendar</a>
+</div>
+
+<div class="main">
+ <div class="topbar">
+  <input type="text" placeholder="Search anything...">
+
+  <div class="profile-area">
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+
+    <div class="profile-menu">
+      <button class="profile-icon" onclick="toggleProfileMenu()">👤</button>
+
+      <div class="profile-dropdown" id="profileDropdown">
+        <h3 id="profileName">Student</h3>
+        <p id="profileEmail">student@email.com</p>
+
+        <input id="usernameInput" placeholder="Change username">
+        <button onclick="updateProfile()">Update Profile</button>
+
+        <button type="button" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <h1 id="greetingText">Hello 🌤️</h1>
+  <p class="subtitle">Stay focused and make today productive.</p>
+
+  <div class="cards">
+    <div class="card">
+  🔥 <h3 id="taskStreak">0</h3>
+  <p>Task Streak</p>
+</div>
+
+<div class="card">
+  🌱 <h3 id="habitStreak">0</h3>
+  <p>Habit Streak</p>
+</div>
+    <div class="card">
+      ✅ <h3 id="taskCount">0</h3>
+      <p>Tasks Completed</p>
+    </div>
+
+    <div class="card">
+      ⏱️ <h3 id="sessionCount">0</h3>
+      <p>Focus Sessions</p>
+    </div>
+
+    <div class="card">
+      🎯 <h3 id="productivityScore">0%</h3>
+      <p>Productivity Score</p>
+    </div>
+
+    <div class="card">
+      💻 <h3 id="totalScreenTime">0h</h3>
+      <p>Screen Time</p>
+    </div>
+    <div class="box insight-box">
+  <h2>Smart Motivation 💡</h2>
+  <p id="motivationText">Your progress insight will appear here.</p>
+</div>
+  </div>
+
+  <div class="grid">
+    <div class="box">
+      <h2>To-Do List</h2>
+      <div class="input-row">
+        <input id="taskInput" placeholder="Enter task" onkeypress="handleTaskEnter(event)">
+        <button onclick="addTask()">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+
+    <div class="box">
+      <h2>Pomodoro Timer</h2>
+      <div class="timer" id="timer">25:00</div>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="pauseTimer()">Pause</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <div class="box large">
+      <h2>Screen Time Analyzer</h2>
+      <div class="input-row">
+        <input id="appName" placeholder="App name" onkeypress="handleScreenTimeEnter(event)">
+        <input id="hoursUsed" type="number" placeholder="Hours" onkeypress="handleScreenTimeEnter(event)">
+        <select id="category">
+          <option>Productive</option>
+          <option>Entertainment</option>
+          <option>Social Media</option>
+        </select>
+        <button onclick="addScreenTime()">Add</button>
+      </div>
+      <ul id="screenList"></ul>
+      <h3 id="suggestion"></h3>
+    </div>
+
+    <div class="box">
+      <h2>Habit Tracker</h2>
+      <div class="input-row">
+        <input id="habitInput" placeholder="Enter habit" onkeypress="handleHabitEnter(event)">
+        <button onclick="addHabit()">Add</button>
+      </div>
+      <ul id="habitList"></ul>
+    </div>
+
+    <div class="box">
+      <h2>Quick Notes</h2>
+      <textarea id="notes" placeholder="Write your notes..."></textarea>
+      <button onclick="saveNotes()">Save Notes</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
